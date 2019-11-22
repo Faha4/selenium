@@ -1,0 +1,31 @@
+<odoo>
+  <data>
+
+          <record id="selenium_automate_form" model="ir.ui.view">
+                <field name="name">Selenium Automate</field>
+                <field name="model">selenium.automate</field>
+                <field name="arch" type="xml">
+                      <form string="Import a xls file">
+                          <footer>
+                              <button name="submit_url_to_convert" type="object"
+                                      string="Selenium Automate" class="oe_highlight"/>
+                              <button special="cancel" string="Cancel"/>
+                          </footer>
+
+                      </form>
+                </field>
+              </record>
+
+              <record id="selenium_automate_action" model="ir.actions.act_window">
+                <field name="name">Selenium Automate</field>
+                <field name="res_model">selenium.automate</field>
+                <field name="view_mode">form</field>
+                <field name="target">new</field>
+              </record>
+
+              <menuitem id="selenium_automate_menu"
+                  action="selenium_automate_action"
+                        sequence="15"/>
+
+  </data>
+</odoo>
